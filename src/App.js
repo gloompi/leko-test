@@ -2,6 +2,7 @@ import React from 'react'
 
 import { withStyles } from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
+import Typography from '@material-ui/core/Typography'
 
 import LiveSearch from './components/LiveSearch'
 import SelectSort from './components/SelectSort'
@@ -21,11 +22,22 @@ const styles = theme => ({
     textAlign: 'center',
     color: theme.palette.text.secondary,
   },
+  title: {
+    fontSize: 24,
+    textAlign: 'center',
+    paddingTop: '15px',
+    color: theme.palette.text.primary,
+  },
 })
 
 const App = ({ classes }) => (
   <div className={classes.app}>
     <Grid container spacing={24}>
+      <Grid item xs={12}>
+        <Typography className={classes.title} color='textSecondary'>
+          Game of Thrones - Death List
+        </Typography>
+      </Grid>
       <Grid item xs={5}>
         <LiveSearch />
       </Grid>

@@ -15,9 +15,6 @@ const styles = {
     position: 'relative',
     minWidth: 275,
   },
-  title: {
-    fontSize: 14,
-  },
   pos: {
     marginBottom: 12,
   },
@@ -49,20 +46,20 @@ const List = ({
       <Grid key={id} item xs={3} >
         <Card className={classes.card}>
           <CardContent>
-            <Typography className={classes.title} color='textSecondary' gutterBottom>
-              Name: {name}
+            <Typography className={classes.pos} color='textSecondary'>
+              <b>Name</b>: {name}
             </Typography>
             <Typography className={classes.pos} color='textSecondary'>
-              Description: {description}
+              <b>Description</b>: {description}
             </Typography>
             <Typography className={classes.pos} color='textSecondary'>
-              Death Reason: {death_reason}
+              <b>Death Reason</b>: {death_reason}
             </Typography>
             <Typography className={classes.pos} color='textSecondary'>
-              Killed By: {killed_by}
+              <b>Killed By</b>: {killed_by}
             </Typography>
             <Typography className={classes.pos} color='textSecondary'>
-              Killed by Weapon: {weapon}
+              <b>Weapon used to kill</b>: {weapon}
             </Typography>
           </CardContent>
           <CardActions>
